@@ -157,11 +157,10 @@ def read_package(workout_type: str, data: list) -> Training:
         'RUN': Running,
         'WLK': SportsWalking
     }
-    try:
-        if workout_type in dict_gadget:
-            return dict_gadget[workout_type](*data)
-    except ValueError as ve:
-        print('ValueError', ve)
+    if workout_type in dict_gadget:
+        return dict_gadget[workout_type](*data)
+
+    raise ValueError('Нет такого типа тренировки')
 
 
 def main(training: Training) -> None:
