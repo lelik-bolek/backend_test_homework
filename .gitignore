@@ -1,5 +1,5 @@
 # игнорировать файл README.md
-README.md
+#README.md
 
 # игнорировать файл side.txt в директории build
 build/side.txt
